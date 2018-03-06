@@ -10,16 +10,13 @@ public class PostgreSQLJDBC {
 		String password;
 		String userName;
 		CommandsSQL impl = new implementCommands();
-		
+
 		//CONNECT
-		userName = "postgres"; 		
+		userName = "postgres";
 		password = "";
 		impl.Connect(userName, password);
 		//Finish Connecting
 		impl.DATABASELOGIN("ropa", userName, password);
-		
-		
-		
-		
+
 	}
 }
