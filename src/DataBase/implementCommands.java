@@ -55,7 +55,6 @@ public class implementCommands implements CommandsSQL{
 	}
 	@Override
 	public String CREATEDB(String name) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -97,7 +96,6 @@ public class implementCommands implements CommandsSQL{
 					.getConnection("jdbc:postgresql://localhost:5432/"+name,
 							username, password);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
 		}
@@ -107,7 +105,6 @@ public class implementCommands implements CommandsSQL{
 
 	@Override
 	public String LOADDBS() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
