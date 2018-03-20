@@ -11,6 +11,7 @@ public class Login {
     public JPanel loginView;
     private JPasswordField passField;
     private JTextField userField;
+    private JLabel spacer2;
     CommandsSQL database;
     String TAG = "GUI/Login: ";
     boolean debug = false;
