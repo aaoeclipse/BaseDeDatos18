@@ -11,6 +11,7 @@ public class implementCommands implements CommandsSQL{
 	String sql = null;
 	String output = null;
 	static String DB_URL = "jdbc:postgresql://localhost:5432/proyecto1";
+
     @Override
     public boolean Connect(String username, String password) {
         try {
