@@ -1,5 +1,10 @@
 package DataBase;
 
+import Objects.User;
+
+import java.util.ArrayList;
+import java.util.Stack;
+
 public interface CommandsSQL {
 	
 	//REQUERIMIENTO: nada
@@ -10,14 +15,6 @@ public interface CommandsSQL {
 	//Selecciona un subconjunto en una tabla. Si no encuentra la columna o la tabla regresa falso.
 	public boolean SELECT(String select, String fromTable);
 	
-	//REQUERIMIENTO: estar conectado a postgres y a la base de datos 
-	//
-	public boolean DROP(String name);
-	
-	//REQUERIMIENTO: Estar conectado a postgres y a una base de datos
-	//
-	public boolean CREATETABLE(String name);
-	
 	//REQUERIMIENTO: Estar en una base de datos
 	//
 	public boolean INSERTINTO(String name, String insertar);
@@ -25,10 +22,17 @@ public interface CommandsSQL {
 	//REQUERIMIENTO: nada
 	//
 	public boolean DATABASELOGIN(String name, String username, String password);
-	
-	//REQUERIMIENTO: 
-	//
-	public String CREATEDB(String name);
-	
+
 	public String LOADDBS();
+
+	public ArrayList<User> getUsers();
+
+	public void addEmpleado();
+
+	public void addProyecto();
+
+	public void assignEmpleadoProyecto(int user, int proyecto);
+
+	// SHOW PROYECTOS
+    //
 }

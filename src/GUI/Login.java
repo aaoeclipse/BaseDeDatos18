@@ -12,14 +12,22 @@ public class Login {
     private JPasswordField passField;
     private JTextField userField;
     private JLabel spacer2;
-    CommandsSQL database;
+    CommandsSQL dbconnect;
     String TAG = "GUI/Login: ";
     boolean debug = false;
+    JFrame thisWindow;
 
     public Login(){
         if(debug)
             System.out.println(TAG+" LogIn Created");
-        database = new implementCommands();
+        //window
+        thisWindow = new JFrame("Login");
+        thisWindow.setContentPane(loginView);
+        thisWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        thisWindow.pack();
+        thisWindow.setVisible(true);
+        //database
+        dbconnect = new implementCommands();
         button1.addActionListener(new changeText());
     }
 
@@ -36,8 +44,10 @@ public class Login {
                 System.out.println(TAG+" username: "+userField.getText() );
             for(int i = 0; i < breakdown.length;i++)
                 pass += breakdown[i];
-            if(database.Connect(userField.getText(),pass))
-                 userField.setText("Success");
+            if(dbconnect.Connect(userField.getText(),pass)) {
+                ShowTable newWindow = new ShowTable(dbconnect);
+                thisWindow.dispose();
+            }
              else
                  userField.setText("failed");
         }

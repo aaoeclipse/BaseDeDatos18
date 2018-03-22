@@ -1,7 +1,7 @@
 package Objects;
 
 public class User {
-    private int idUser;
+    private int idEmpleado;
     private String nombre;
     private String apellido;
     public float salario;
@@ -11,9 +11,16 @@ public class User {
     private String foto_dir;
     private String fecha_nacimiento;
     private String fecha_contratacion;
+    private int idPuesto;
+    private int id_tecnologia;
+    private int id_Proyecto;
 
-    public User(int idUser, String nombre, String apellido, float salario, String direccion, String horrario, String departamento, String foto_dir, String fecha_nacimiento, String fecha_contratacion) {
-        this.idUser = idUser;
+    public User(){
+
+    }
+
+    public User(int idEmpleado, String nombre, String apellido, float salario, String direccion, String horrario, String departamento, String foto_dir, String fecha_nacimiento, String fecha_contratacion, int idPuesto, int id_tecnologia, int id_Proyecto) {
+        this.idEmpleado = idEmpleado;
         this.nombre = nombre;
         this.apellido = apellido;
         this.salario = salario;
@@ -23,11 +30,13 @@ public class User {
         this.foto_dir = foto_dir;
         this.fecha_nacimiento = fecha_nacimiento;
         this.fecha_contratacion = fecha_contratacion;
+        this.idPuesto = idPuesto;
+        this.id_tecnologia = id_tecnologia;
+        this.id_Proyecto = id_Proyecto;
     }
-
-    // GETTERS
-    public int getIdUser() {
-        return idUser;
+//GETTERS
+    public int getIdEmpleado() {
+        return idEmpleado;
     }
 
     public String getNombre() {
@@ -66,9 +75,20 @@ public class User {
         return fecha_contratacion;
     }
 
-    // SETTERS
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
+    public int getIdPuesto() {
+        return idPuesto;
+    }
+
+    public int getId_tecnologia() {
+        return id_tecnologia;
+    }
+
+    public int getId_Proyecto() {
+        return id_Proyecto;
+    }
+//SETTERS
+    public void setIdEmpleado(int idEmpleado) {
+        this.idEmpleado = idEmpleado;
     }
 
     public void setNombre(String nombre) {
@@ -105,5 +125,52 @@ public class User {
 
     public void setFecha_contratacion(String fecha_contratacion) {
         this.fecha_contratacion = fecha_contratacion;
+    }
+
+    public void setIdPuesto(int idPuesto) {
+        this.idPuesto = idPuesto;
+    }
+
+    public void setId_tecnologia(int id_tecnologia) {
+        this.id_tecnologia = id_tecnologia;
+    }
+
+    public void setId_Proyecto(int id_Proyecto) {
+        this.id_Proyecto = id_Proyecto;
+    }
+    public String[] stringArray(){
+        String[] toReturn = new String[13];
+        toReturn[0] = "" +idEmpleado;
+        toReturn[1] = nombre;
+        toReturn[2] = apellido;
+        toReturn[3] = ""+salario;
+        toReturn[4] = direccion;
+        toReturn[5] = horrario;
+        toReturn[6] = departamento;
+        toReturn[7] = foto_dir;
+        toReturn[8] = fecha_nacimiento;
+        toReturn[9] = fecha_contratacion;
+        toReturn[10] = ""+idPuesto;
+        toReturn[11] = ""+id_tecnologia;
+        toReturn[12] = ""+id_Proyecto;
+        return toReturn;
+    }
+    @Override
+    public String toString() {
+        return "User{" +
+                "idEmpleado=" + idEmpleado +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", salario=" + salario +
+                ", direccion='" + direccion + '\'' +
+                ", horrario='" + horrario + '\'' +
+                ", departamento='" + departamento + '\'' +
+                ", foto_dir='" + foto_dir + '\'' +
+                ", fecha_nacimiento='" + fecha_nacimiento + '\'' +
+                ", fecha_contratacion='" + fecha_contratacion + '\'' +
+                ", idPuesto=" + idPuesto +
+                ", id_tecnologia=" + id_tecnologia +
+                ", id_Proyecto=" + id_Proyecto +
+                '}';
     }
 }
