@@ -1,6 +1,6 @@
 package DataBase;
 
-import Objects.User;
+import Objects.*;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -23,16 +23,22 @@ public interface CommandsSQL {
 	//
 	public boolean DATABASELOGIN(String name, String username, String password);
 
-	public String LOADDBS();
-
 	public ArrayList<User> getUsers();
 
-	public void addEmpleado();
+	public boolean addEmpleado(User userToAdd);
 
-	public void addProyecto();
+	public boolean addProyecto(Proyecto proyectoToAdd);
 
-	public void assignEmpleadoProyecto(int user, int proyecto);
+	public boolean addColumnasExtras(int id, String nombre, String valor);
 
-	// SHOW PROYECTOS
-    //
+	public void alterColumnExtras(int user, int proyecto);
+
+	public ArrayList<Proyecto> getProyectos();
+	public ArrayList<String> getColumnasExtras();
+	public ArrayList<Puestos> getPuestos();
+	public ArrayList<Tecnologia> getTecnologia();
+	public int getNewID();
+    public ArrayList<ColumnasExtras> getColumnasConValor(int empleado);
+
+
 }

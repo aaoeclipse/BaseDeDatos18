@@ -27,6 +27,7 @@ public class ShowTable {
     private JButton button6;
     public JPanel TableForm;
     private JLabel spacer;
+    private JButton searchButton;
     private JFrame thisWindow;
     private ArrayList<User> users;
     private CommandsSQL dbconnection;
@@ -41,7 +42,7 @@ public class ShowTable {
         thisWindow.setContentPane(TableForm);
         thisWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         thisWindow.pack();
-        thisWindow.setSize(1024,1024);
+        thisWindow.setSize(1550,800);
         thisWindow.setVisible(true);
 
         // init
@@ -51,7 +52,6 @@ public class ShowTable {
         DefaultTableModel model = (DefaultTableModel) tablaUsuarios.getModel();
         tablaUsuarios.setShowGrid(true);
         // Columnas
-        TableColumn[] columnasUsuarios = new TableColumn[13];
         String[] nombreColumnas = {
                 "ID",
                 "Nombre",
@@ -73,23 +73,15 @@ public class ShowTable {
         for (int i = 0; i < users.size();i++) {
             model.addRow(users.get(i).stringArray());
         }
-        tablaUsuarios.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
-            @Override
-            public void valueChanged(ListSelectionEvent event) {
-                if (tablaUsuarios.getSelectedRow() > -1) {
-                    System.out.println(tablaUsuarios.getValueAt(tablaUsuarios.getSelectedRow(), 0).toString());
-                    if (!notReopen){
-                        notReopen = true;
-                        AddUser newWindow = new AddUser(users.get(Integer.parseInt(tablaUsuarios.getValueAt(tablaUsuarios.getSelectedRow(), 0).toString())),dbconnection);
-                        thisWindow.dispose();
-                    }
-
+        tablaUsuarios.getSelectionModel().addListSelectionListener(event -> {
+            if (tablaUsuarios.getSelectedRow() > -1) {
+                if (!notReopen){
+                    notReopen = true;
+                    AddUser newWindow = new AddUser(users.get(Integer.parseInt(tablaUsuarios.getValueAt(tablaUsuarios.getSelectedRow(), 0).toString())),dbconnection);
+                    thisWindow.dispose();
                 }
             }
         });
-        /*
-
-         */
         // Listners
         logOutButton.addActionListener(new ActionListener() {
             @Override
