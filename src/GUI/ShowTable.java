@@ -33,6 +33,7 @@ public class ShowTable {
     private CommandsSQL dbconnection;
     private boolean first;
     private boolean notReopen = false;
+
     public ShowTable(CommandsSQL dbconnection) {
         // connexion a base de datos
         this.dbconnection = dbconnection;
@@ -103,6 +104,12 @@ public class ShowTable {
                 super.mouseClicked(mouseEvent);
                 if(first)
                     searchTextField.setText("");
+            }
+        });
+        searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                //TODO
             }
         });
     }

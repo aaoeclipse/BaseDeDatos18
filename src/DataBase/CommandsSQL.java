@@ -40,5 +40,8 @@ public interface CommandsSQL {
 	public int getNewID();
     public ArrayList<ColumnasExtras> getColumnasConValor(int empleado);
 
+    public String[][] INSERTSQL(String sql);
+    public void runSQL(String sql);
+
 
 }

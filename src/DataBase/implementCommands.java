@@ -306,6 +306,32 @@ public class implementCommands implements CommandsSQL{
     }
 
     @Override
+    public String[][] INSERTSQL(String sql) {
+        try{
+            String[][] toReturn;
+            statement = c.createStatement();
+            ResultSet rs = statement.executeQuery(sql);
+
+
+        } catch (SQLException e){
+
+        }
+        return null;
+    }
+
+    @Override
+    public void runSQL(String sql) {
+        try{
+            statement = c.createStatement();
+            ResultSet rs = statement.executeQuery(sql);
+
+
+        } catch (SQLException e){
+
+        }
+    }
+
+    @Override
     public ArrayList<String> getColumnasExtras() {
         try{
             ArrayList<String> stringToReturn = new ArrayList<>();
