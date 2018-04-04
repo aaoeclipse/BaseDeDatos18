@@ -20,14 +20,25 @@ public class ShowTable {
     private JTextField searchTextField;
     private JButton addUSerButton;
     private JButton logOutButton;
-    private JButton button2;
-    private JButton button3;
-    private JButton button4;
-    private JButton button5;
-    private JButton button6;
+    private JButton cumpleañerosButton;
+    private JButton listarUltimosEmpleadosContratadosButton;
     public JPanel TableForm;
     private JLabel spacer;
     private JButton searchButton;
+    private JTextArea queryResults;
+    private JButton numeroDeEmpleadosEnButton1;
+    private JButton numeroDeEmpleadosEnButton;
+    private JTextField textField2;
+    private JTextField textFieldTecnologiaResumen;
+    private JButton promedioDeSalarioButton;
+    private JTextField textField3;
+    private JButton listarEmpleadosButton;
+    private JTextField textField4;
+    private JButton listarEmpleadosConMayorButton;
+    private JTextField textField5;
+    private JButton listarEmpleadosConHorarioButton;
+    private JTextField textField6;
+    private JButton botonNumeroEmpleado;
     private JFrame thisWindow;
     private ArrayList<User> users;
     private CommandsSQL dbconnection;
@@ -103,6 +114,12 @@ public class ShowTable {
                 super.mouseClicked(mouseEvent);
                 if(first)
                     searchTextField.setText("");
+            }
+        });
+        botonNumeroEmpleado.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }
