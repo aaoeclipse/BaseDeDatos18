@@ -20,7 +20,7 @@ public class ShowTable {
     private JTextField searchTextField;
     private JButton addUSerButton;
     private JButton logOutButton;
-    private JButton button2;
+    private JButton view1Button;
     private JButton button3;
     private JButton button4;
     private JButton button5;
@@ -28,11 +28,13 @@ public class ShowTable {
     public JPanel TableForm;
     private JLabel spacer;
     private JButton searchButton;
+    private JComboBox comboBox1;
+    private JComboBox comboBox2;
     private JFrame thisWindow;
     private ArrayList<User> users;
     private CommandsSQL dbconnection;
     private boolean first;
-    private boolean notReopen = false;
+    private boolean notReopen = false; // cuando se hace click, se activa muchas veces, esto evita que se haga reopen
 
     public ShowTable(CommandsSQL dbconnection) {
         // connexion a base de datos
@@ -43,7 +45,7 @@ public class ShowTable {
         thisWindow.setContentPane(TableForm);
         thisWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         thisWindow.pack();
-        thisWindow.setSize(1550,800);
+        thisWindow.setSize(1550, 800);
         thisWindow.setVisible(true);
 
         // init
@@ -68,22 +70,28 @@ public class ShowTable {
                 "Tecnologia",
                 "Proyecto"
         };
-        for (int i = 0; i < nombreColumnas.length;i++)
+        // El Esquema de la tabla (se usa el model para ponerle las columnas y las filas)
+        for (int i = 0; i < nombreColumnas.length; i++)
             model.addColumn(nombreColumnas[i]);
-        users = dbconnection.getUsers();
-        for (int i = 0; i < users.size();i++) {
+        // Informacion de la Tabla
+        users = dbconnection.getUsers(); // DB gets user
+        for (int i = 0; i < users.size(); i++) {
             model.addRow(users.get(i).stringArray());
         }
+
+        // CLICK LISTNER PARA LA TABLA
         tablaUsuarios.getSelectionModel().addListSelectionListener(event -> {
             if (tablaUsuarios.getSelectedRow() > -1) {
-                if (!notReopen){
+                if (!notReopen) {
                     notReopen = true;
-                    AddUser newWindow = new AddUser(users.get(Integer.parseInt(tablaUsuarios.getValueAt(tablaUsuarios.getSelectedRow(), 0).toString())),dbconnection);
+                    AddUser newWindow = new AddUser(users.get(Integer.parseInt(tablaUsuarios.getValueAt(tablaUsuarios.getSelectedRow(), 0).toString())), dbconnection);
                     thisWindow.dispose();
                 }
             }
         });
+
         // Listners
+        // LOGOUT BUTTON
         logOutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -91,6 +99,7 @@ public class ShowTable {
                 thisWindow.dispose();
             }
         });
+        // ADD USER BUTTON
         addUSerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -98,20 +107,68 @@ public class ShowTable {
                 thisWindow.dispose();
             }
         });
+        // SEARCH FIELD desaparece lo que lleva adentro para facilitar el uso
         searchTextField.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent mouseEvent) {
                 super.mouseClicked(mouseEvent);
-                if(first)
+                if (first)
                     searchTextField.setText("");
             }
         });
+        // SEARCH BUTTON - manda a llenar la tabla con un select LIKE y busca usuarios con el String del search text field
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                //TODO
+                DefaultTableModel model = (DefaultTableModel) tablaUsuarios.getModel();
+                if (searchTextField.getText() == null || searchTextField.getText().equalsIgnoreCase("")) {
+                    if (model.getRowCount() > 0) {
+                        for (int i = model.getRowCount() - 1; i > -1; i--) {
+                            model.removeRow(i);
+                        }
+                    }
+                    users = dbconnection.getUsers(); // DB gets user
+                    for (int i = 0; i < users.size(); i++) {
+                        model.addRow(users.get(i).stringArray());
+                    }
+                } else {
+
+                    if (model.getRowCount() > 0) {
+                        for (int i = model.getRowCount() - 1; i > -1; i--) {
+                            model.removeRow(i);
+                        }
+                    }
+                    users = dbconnection.getUsers(searchTextField.getText()); // DB gets user
+                    if (users.size() == 0)
+                        users = dbconnection.getUsersLastName(searchTextField.getText());
+                    for (int i = 0; i < users.size(); i++) {
+                        model.addRow(users.get(i).stringArray());
+                    }
+                    // CLICK LISTNER PARA LA TABLA
+                    tablaUsuarios.getSelectionModel().addListSelectionListener(event -> {
+                        if (tablaUsuarios.getSelectedRow() > -1) {
+                            if (!notReopen) {
+                                notReopen = true;
+                                AddUser newWindow = new AddUser(users.get(Integer.parseInt(tablaUsuarios.getValueAt(tablaUsuarios.getSelectedRow(), 0).toString())), dbconnection);
+                                thisWindow.dispose();
+                            }
+                        }
+                    });
+                }
             }
         });
+        // PRIMER VIEW
+        view1Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                dbconnection.SELECT("SELECT COUNT(id) FROM public.\"Empleado\" WHERE public.\"Empleado\".\"id_Proyecto\" = 0");
+                changeTable();
+            }
+        });
+    }
+
+    private void changeTable(){
+        // TODO
     }
 
 }
