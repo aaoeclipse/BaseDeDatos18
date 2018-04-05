@@ -2,6 +2,7 @@ import DataBase.CommandsSQL;
 import DataBase.implementCommands;
 import GUI.AddUser;
 import GUI.Login;
+import GUI.TwitterView;
 import twitter.Tweets;
 
 import javax.swing.*;
@@ -11,7 +12,7 @@ public class main {
     public static void main (String[] args) throws IOException {
         CommandsSQL dbConnection = new implementCommands();
         Login login = new Login();
-        Tweets t =  new Tweets();
-        t.getTweets();
+        TwitterView tweets = new TwitterView();
+
     }
 }

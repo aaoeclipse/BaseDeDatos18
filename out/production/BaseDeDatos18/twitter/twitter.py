@@ -1,6 +1,7 @@
 import tweepy #https://github.com/tweepy/tweepy
 import csv
 import pymongo
+import sys
 from pymongo import MongoClient
 client = MongoClient()
 client = MongoClient('localhost', 27017)
@@ -17,8 +18,9 @@ access_secret = "GXmvt7DfjnTE17q2XkN73fWPMKVGICNS2M5BIP296IhMI"
 
 
 def get_all_tweets(screen_name):
-    #Twitter only allows access to a users most recent 3240 tweets with this method
     
+    #Twitter only allows access to a users most recent 3240 tweets with this method
+
     #authorize twitter, initialize tweepy
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_key, access_secret)
@@ -55,7 +57,7 @@ def get_all_tweets(screen_name):
     #transform the tweepy tweets into a 2D array that will populate the csv 
     outtweets = [[tweet.id_str, tweet.created_at, tweet.text.encode("utf-8")] for tweet in alltweets]
     return outtweets
-    #write the csv 
+#write the csv 
 
 def guardar(TheTweets,user):
     
@@ -65,11 +67,12 @@ def guardar(TheTweets,user):
                     "date": str(tweet[1]),
                     "mensaje": (tweet[2]).decode("utf-8")
             })
-t = get_all_tweets("hectorh30")
-
-guardar(t,"hectorh30")
+t = get_all_tweets(str(sys.argv[1]))
+if len(t)>0:
+    guardar(t,str(sys.argv[1]))
 
 
 #for i in db.tweets.find({"user":"J_tsar","mensaje":'Im doing laundry?! at this time? #college'}):
 #    print(i)
 print(db.tweets.count())
+print(">>"+str(sys.argv[1]))

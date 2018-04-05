@@ -11,5 +11,6 @@
     <orderEntry type="library" name="bson-3.4.3" level="project" />
     <orderEntry type="library" name="mongo-java-driver-3.6.3" level="project" />
     <orderEntry type="library" name="twitter4j" level="project" />
+    <orderEntry type="library" name="jgoodies" level="project" />
   </component>
 </module>

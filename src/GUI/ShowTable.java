@@ -33,6 +33,7 @@ public class ShowTable {
     private CommandsSQL dbconnection;
     private boolean first;
     private boolean notReopen = false;
+
     public ShowTable(CommandsSQL dbconnection) {
         // connexion a base de datos
         this.dbconnection = dbconnection;
