@@ -33,8 +33,8 @@
           </scrollpane>
           <component id="99718" class="javax.swing.JTextArea" binding="queryResults">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="50"/>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="1" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="100" height="50"/>
               </grid>
             </constraints>
             <properties>
@@ -123,7 +123,7 @@
           <text value="Numero de Empleados"/>
         </properties>
       </component>
-      <component id="d2f15" class="javax.swing.JButton" default-binding="true">
+      <component id="d2f15" class="javax.swing.JButton" binding="btnSalarioMasAlto">
         <constraints>
           <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -179,7 +179,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value=""/>
+            </properties>
           </component>
         </children>
       </grid>
@@ -207,7 +209,7 @@
               <text value="Numero De Empleados en Puesto"/>
             </properties>
           </component>
-          <component id="b0991" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+          <component id="b0991" class="javax.swing.JTextField" binding="textFieldPuestoResumen">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -241,7 +243,7 @@
               <text value="Promedio de Salario"/>
             </properties>
           </component>
-          <component id="78108" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+          <component id="78108" class="javax.swing.JTextField" binding="textFieldPuestoSalarioResumen">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -275,7 +277,7 @@
               <text value="Listar Empleados"/>
             </properties>
           </component>
-          <component id="57358" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+          <component id="57358" class="javax.swing.JTextField" binding="textFieldTecnologiaDetallado">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -309,7 +311,7 @@
               <text value="Listar Empleados Con Mayor Salario"/>
             </properties>
           </component>
-          <component id="ce84c" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+          <component id="ce84c" class="javax.swing.JTextField" binding="textFieldSalarioMayor">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -343,7 +345,7 @@
               <text value="Listar Empleados Con Horario"/>
             </properties>
           </component>
-          <component id="2bc31" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+          <component id="2bc31" class="javax.swing.JTextField" binding="textFieldHorario">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>

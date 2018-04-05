@@ -13,7 +13,7 @@ public interface CommandsSQL {
 	
 	//REQUERIMIENTO: Estar conectado ya a postgres y a una base de datos
 	//Selecciona un subconjunto en una tabla. Si no encuentra la columna o la tabla regresa falso.
-	public boolean SELECT(String select, String fromTable);
+	public boolean SELECT(String select);
 	
 	//REQUERIMIENTO: Estar en una base de datos
 	//

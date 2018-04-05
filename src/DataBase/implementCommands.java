@@ -30,10 +30,10 @@ public class implementCommands implements CommandsSQL{
         return true;
     }
 
-	public boolean SELECT(String select, String fromTable) {
+	public boolean SELECT(String select) {
 		try {
 			statement = c.createStatement();
-			ResultSet rs = statement.executeQuery("SELECT " + select + " FROM "+ fromTable);
+			ResultSet rs = statement.executeQuery(select );
 			while (rs.next()) {
 				  output = rs.getString(select);
 				  System.out.println(output);
