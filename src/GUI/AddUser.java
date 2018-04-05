@@ -7,13 +7,14 @@ import Objects.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Objects;
 
 public class AddUser {
-    private JLabel image;
+    private JLabel imageLabel;
     private JTextField Nombre;
     private JTextField Direccion;
     private JTextField Apellido;
@@ -34,6 +35,7 @@ public class AddUser {
     private JComboBox comboProyecto;
     private JScrollPane scrollColumnas;
     private JButton nuevaColumnaButton;
+    private JButton seleccionarImagenButton;
     private TableColumn columns;
     private TableColumn values;
     private User user;
@@ -45,6 +47,7 @@ public class AddUser {
     private ArrayList<Tecnologia> tecnologias;
     ArrayList<NombreConTipo> nombreCol;
     private boolean isUserCreated;
+    JFileChooser fc = null;
 
     CommandsSQL dbconnection = new implementCommands();
 
@@ -77,6 +80,13 @@ public class AddUser {
             }
         });
 
+        seleccionarImagenButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                fc = new JFileChooser();
+                fc.showOpenDialog(thisWindow);
+            }
+        });
     }
 
     public AddUser(User user, CommandsSQL dbconnection) {
@@ -186,6 +196,31 @@ public class AddUser {
                 }
             }
         });
+        ImageIcon icon = null;
+        try {
+            icon = createImageIcon(user.getFoto_dir(),
+                    "imagen");
+        } catch (Exception e){
+            icon = createImageIcon("../Resources/profileDefault.png",
+                    "default");
+            if (icon == null){
+                System.err.println("No image");
+            }
+            System.out.println("No tiene foto");
+        }
+        imageLabel.setIcon(icon);
+
+    }
+
+    /** Returns an ImageIcon, or null if the path was invalid. */
+    protected ImageIcon createImageIcon(String path,
+                                        String description) {
+        java.net.URL imgURL = getClass().getResource(path);
+        if (imgURL != null) {
+            return new ImageIcon(imgURL, description);
+        } else {
+            return null;
+        }
     }
 
     private void creatTable() {
@@ -274,6 +309,4 @@ public class AddUser {
         else
             return 0.0f;
     }
-
-
 }
