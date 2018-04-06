@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc703e07-14d0-454b-a277-28f3e0c68f50" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/GUI/AddUser.form" afterPath="$PROJECT_DIR$/src/GUI/AddUser.form" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AddUser.java" afterPath="$PROJECT_DIR$/src/GUI/AddUser.java" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/ShowTable.form" afterPath="$PROJECT_DIR$/src/GUI/ShowTable.form" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/GUI/ShowTable.java" afterPath="$PROJECT_DIR$/src/GUI/ShowTable.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,14 +21,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ShowTable.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ShowTable.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/ShowTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="287" column="0" lean-forward="true" selection-start-line="287" selection-start-column="0" selection-end-line="287" selection-end-column="0" />
+            <state relative-caret-position="359">
+              <caret line="289" column="13" lean-forward="true" selection-start-line="289" selection-start-column="13" selection-end-line="289" selection-end-column="13" />
               <folding>
-                <element signature="e#13173#13174#0" expanded="true" />
-                <element signature="e#13239#13240#0" expanded="true" />
+                <element signature="e#13616#13617#0" expanded="true" />
+                <element signature="e#13682#13683#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tweets.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tweets.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/twitter/Tweets.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -892,32 +890,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/ShowTable.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/AddUser.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/AddUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2344">
           <caret line="93" column="41" lean-forward="true" selection-start-line="93" selection-start-column="41" selection-end-line="93" selection-end-column="41" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/ShowTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="287" column="0" lean-forward="true" selection-start-line="287" selection-start-column="0" selection-end-line="287" selection-end-column="0" />
-          <folding>
-            <element signature="e#13173#13174#0" expanded="true" />
-            <element signature="e#13239#13240#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -934,6 +911,27 @@
         <state relative-caret-position="289">
           <caret line="40" column="61" lean-forward="false" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="61" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/AddUser.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/ShowTable.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/ShowTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="289" column="13" lean-forward="true" selection-start-line="289" selection-start-column="13" selection-end-line="289" selection-end-column="13" />
+          <folding>
+            <element signature="e#13616#13617#0" expanded="true" />
+            <element signature="e#13682#13683#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

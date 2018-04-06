@@ -278,8 +278,12 @@ public class ShowTable {
             @Override
             public void actionPerformed(ActionEvent e) {
                 queryResults.setText("Listar Empleado\n");
-                dbconnection.SELECT("SELECT * FROM public.\"Empleado\" WHERE public.\"Empleado\".\"horario\" LIKE '%"+textFieldTecnologiaDetallado.getText()+"%'");
+                //dbconnection.SELECT("SELECT * FROM public.\"Empleado\" WHERE public.\"Empleado\".\"horario\" LIKE '%"+textFieldTecnologiaDetallado.getText()+"%'");
+                resultqr=dbconnection.SELECT("SELECT * FROM public.\"Empleado\" \n" +
+                        "\tINNER JOIN public.\"Tecnologia\" ON (public.\"Tecnologia\".\"id\" = public.\"Empleado\".\"id_tecnologia\") \n" +
+                        "\tWHERE public.\"Tecnologia\".\"nombre\" LIKE \'%"+ textFieldTecnologiaDetallado.getText() + "%\' ORDER BY public.\"Empleado\".\"salario\" DESC");
                 for (String s: resultqr) {
+                    System.out.println(s);
                     queryResults.append(s);
                     queryResults.append("\n");
                 }
