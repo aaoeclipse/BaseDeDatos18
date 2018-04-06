@@ -137,6 +137,7 @@ public class ShowTable {
                 }
             }
         });
+
         // Listners
         logOutButton.addActionListener(new ActionListener() {
             @Override
@@ -163,7 +164,8 @@ public class ShowTable {
         botonNumeroEmpleado.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dbconnection.SELECT("SELECT COUNT(id) FROM public.\"Empleado\" ");
+                queryResults.setText(dbconnection.SELECT("SELECT COUNT(id) FROM public.\"Empleado\" "));
+                System.out.println("Boton Precionado..");
             }
         });
         numeroDeEmpleadosEnButton1.addActionListener(new ActionListener() {

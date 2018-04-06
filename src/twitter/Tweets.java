@@ -73,9 +73,9 @@ public class Tweets {
         String ret = in.readLine();
         System.out.println("value is : "+ret);
 /**
- String command = "python3 ./twitter/twitter.py BasesDatos18";
- Process p = Runtime.getRuntime().exec(command);
- System.out.println(p.toString());**/
+        String command = "python3 ./twitter/twitter.py BasesDatos18";
+        Process p = Runtime.getRuntime().exec(command);
+        System.out.println(p.toString());**/
     }
     public void loadingTweets(String userName){
         confBuild.setDebugEnabled(true);

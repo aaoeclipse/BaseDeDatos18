@@ -88,12 +88,7 @@ public class AddUser {
                 fc.showOpenDialog(thisWindow);
             }
         });
-        tweetsButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
 
-            }
-        });
     }
 
     public AddUser(User user, CommandsSQL dbconnection) {
@@ -154,6 +149,13 @@ public class AddUser {
             public void actionPerformed(ActionEvent actionEvent) {
                 newColumn newWindow = new newColumn(dbconnection, user);
                 thisWindow.dispose();
+            }
+        });
+        tweetsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                TwitterView twitterView = new TwitterView();
+                // thisWindow.dispose();
             }
         });
     }
