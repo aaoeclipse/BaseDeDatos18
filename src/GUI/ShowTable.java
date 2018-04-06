@@ -28,6 +28,7 @@ public class ShowTable {
     public JPanel TableForm;
     private JLabel spacer;
     private JButton searchButton;
+    private JButton myTweets;
     private JFrame thisWindow;
     private ArrayList<User> users;
     private CommandsSQL dbconnection;
@@ -104,6 +105,12 @@ public class ShowTable {
                 super.mouseClicked(mouseEvent);
                 if(first)
                     searchTextField.setText("");
+            }
+        });
+        myTweets.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                TwitterView tweets = new TwitterView();
             }
         });
     }

@@ -4,6 +4,8 @@ import Objects.User;
 import twitter.Tweets;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,6 +27,8 @@ public class TwitterView {
     String[] mes = new String[2];
     private int i;
     private JLabel tweetsLabel;
+    private JButton returnB;
+    DefaultTableModel model;
 
 
     public TwitterView() {
@@ -33,13 +37,13 @@ public class TwitterView {
         thisWindow.setContentPane(TableForm);
         thisWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         thisWindow.pack();
-        thisWindow.setSize(1550,400);
+        thisWindow.setSize(1250,400);
         thisWindow.setVisible(true);
 
         DefaultTableModel model = (DefaultTableModel) tablaTweets.getModel();
         tablaTweets.setShowGrid(true);
         String[] nombreColumnas = {
-                "Fecha",
+                "Date",
                 "Tweet"
         };
         for (int i = 0; i < nombreColumnas.length;i++)
@@ -53,11 +57,12 @@ public class TwitterView {
                 user = userName.getText();
                 //System.out.println(user);
                 userName.setText("");
-                tweetsLabel.setText(user+"'s Tweets ");
+
                 try {
                     messages = tw.getTweets(user);
+                    tweetsLabel.setText(messages.size()+" Tweets ");
                 }
-                catch(IOException e){
+                catch(Exception e){
                     //hola
                 }
                 for (int i = 0; i < messages.size();i++) {
@@ -65,10 +70,26 @@ public class TwitterView {
                 }
             }
         });
+        tablaTweets.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent listSelectionEvent) {
+                twitterInfo twI = new twitterInfo();
+                twI.view(tablaTweets.getValueAt(tablaTweets.getSelectedRow(),1).toString(),tablaTweets.getValueAt(tablaTweets.getSelectedRow(),0).toString(),user);
+                //System.out.println(tablaTweets.getValueAt(tablaTweets.getSelectedRow(),0).toString());
+            }
+        });
+        returnB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                thisWindow.dispose();
+
+            }
+        });
 
 
 
     }
+
 
 
 }

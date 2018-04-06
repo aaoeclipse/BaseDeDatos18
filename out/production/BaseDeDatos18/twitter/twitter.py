@@ -11,8 +11,8 @@ db = client['Twitter']
 tweets = db.tweets
 tweets = db['tweets']
 #Twitter API credentials
-consumer_key = "1fYGcrqRwS1oz1v37MhVwLUEj"
-consumer_secret = "eFXIkf22mDhQHhIjVdCMo3Y693wgTq0wtcJv8cnrNzo4OtoMxN"
+consumer_key = "R6O6hzbFeBGPU0caXpaQ2WQeS"
+consumer_secret = "GkmD3v9uJ66iKa9W2BBUtFV9qZGqUUZ588KFXpCIzmkMZep1PU"
 access_key = "976843852924547074-8JpaQxzIELaBWDAXq3eHeY3eYe17HRf"
 access_secret = "GXmvt7DfjnTE17q2XkN73fWPMKVGICNS2M5BIP296IhMI"
 

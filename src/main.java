@@ -12,7 +12,7 @@ public class main {
     public static void main (String[] args) throws IOException {
         CommandsSQL dbConnection = new implementCommands();
         Login login = new Login();
-        TwitterView tweets = new TwitterView();
+
 
     }
 }

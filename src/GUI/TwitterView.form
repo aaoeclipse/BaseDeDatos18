@@ -3,13 +3,13 @@
   <grid id="27dc6" binding="TableForm" layout-manager="FormLayout">
     <rowspec value="center:55px:grow"/>
     <rowspec value="top:152dlu:noGrow"/>
-    <rowspec value="bottom:44px:grow"/>
+    <rowspec value="bottom:71px:grow"/>
     <rowspec value="top:15dlu:noGrow"/>
     <colspec value="fill:d:noGrow"/>
     <colspec value="left:4dlu:noGrow"/>
     <colspec value="fill:504px:grow"/>
     <constraints>
-      <xy x="20" y="20" width="751" height="680"/>
+      <xy x="20" y="20" width="797" height="707"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -21,7 +21,7 @@
         </constraints>
         <properties>
           <labelFor value="ae054"/>
-          <text value="Usuario"/>
+          <text value="User"/>
         </properties>
       </component>
       <scrollpane id="927f6">
@@ -65,7 +65,16 @@
           <forms/>
         </constraints>
         <properties>
-          <text value="GetTweets"/>
+          <text value="Get Tweets"/>
+        </properties>
+      </component>
+      <component id="6a41e" class="javax.swing.JButton" binding="returnB">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Back"/>
         </properties>
       </component>
     </children>
