@@ -27,22 +27,21 @@ public class implementCommands implements CommandsSQL {
         return true;
     }
     @Override
-    public boolean SELECT(String select) {
+    public String SELECT(String select) {
         try {
             statement = c.createStatement();
             ResultSet rs = statement.executeQuery(select);
             if (debug)
                 while (rs.next()) {
-                    output = rs.getString(select);
+                    output = rs.getString(0);
                     System.out.println(output);
                 }
             statement.close();
-            c.close();
         } catch (SQLException e) {
             e.printStackTrace();
-            return false;
+            return null;
         }
-        return true;
+        return output;
     }
     @Override
     public boolean DATABASELOGIN(String name, String username, String password) {

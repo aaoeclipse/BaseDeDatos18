@@ -83,7 +83,7 @@ public class ShowTable {
             if (tablaUsuarios.getSelectedRow() > -1) {
                 if (!notReopen){
                     notReopen = true;
-                    AddUser newWindow = new AddUser(users.get(Integer.parseInt(tablaUsuarios.getValueAt(tablaUsuarios.getSelectedRow(), 0).toString())),dbconnection);
+                    AddUser newWindow = new AddUser(users.get(tablaUsuarios.getSelectedRow()),dbconnection);
                     thisWindow.dispose();
                 }
             }
@@ -129,7 +129,7 @@ public class ShowTable {
                         if (tablaUsuarios.getSelectedRow() > -1) {
                             if (!notReopen) {
                                 notReopen = true;
-                                AddUser newWindow = new AddUser(users.get(Integer.parseInt(tablaUsuarios.getValueAt(tablaUsuarios.getSelectedRow(), 0).toString())), dbconnection);
+                                AddUser newWindow = new AddUser(users.get(tablaUsuarios.getSelectedRow()),dbconnection);
                                 thisWindow.dispose();
                             }
                         }

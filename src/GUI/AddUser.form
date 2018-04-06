@@ -129,12 +129,12 @@
           <text value="horario"/>
         </properties>
       </component>
-      <component id="3010d" class="javax.swing.JLabel" binding="image">
+      <component id="3010d" class="javax.swing.JLabel" binding="imageLabel">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Image"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="708f6" class="javax.swing.JTextField" binding="Departamento">
@@ -306,6 +306,14 @@
         </constraints>
         <properties>
           <text value="Nueva Columna"/>
+        </properties>
+      </component>
+      <component id="78c0d" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="                  "/>
         </properties>
       </component>
     </children>

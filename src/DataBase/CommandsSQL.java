@@ -7,7 +7,7 @@ public interface CommandsSQL {
     public boolean Connect(String username, String password);
     //REQUERIMIENTO: Estar conectado ya a postgres y a una base de datos
     //Selecciona un subconjunto en una tabla. Si no encuentra la columna o la tabla regresa falso.
-    public boolean SELECT(String select);
+    public String SELECT(String select);
     //REQUERIMIENTO: nada
     //
     public boolean DATABASELOGIN(String name, String username, String password);
