@@ -80,15 +80,6 @@ public class AddUser {
                 nuevaColumnaButton.disable();
             }
         });
-
-        seleccionarImagenButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                fc = new JFileChooser();
-                fc.showOpenDialog(thisWindow);
-            }
-        });
-
     }
 
     public AddUser(User user, CommandsSQL dbconnection) {

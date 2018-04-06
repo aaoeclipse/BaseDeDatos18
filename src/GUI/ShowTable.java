@@ -37,6 +37,7 @@ public class ShowTable {
     private JTextField textFieldHorario;
     private JButton botonNumeroEmpleado;
     private JButton btnSalarioMasAlto;
+    private JButton tweetsButton;
     private JFrame thisWindow;
     private ArrayList<User> users;
     private CommandsSQL dbconnection;
@@ -282,6 +283,13 @@ public class ShowTable {
                     queryResults.append(s);
                     queryResults.append("\n");
                 }
+            }
+        });
+
+        tweetsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                TwitterView tV = new TwitterView();
             }
         });
     }
