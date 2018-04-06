@@ -32,10 +32,9 @@ public class implementCommands implements CommandsSQL {
         System.out.println("connection successful");
         return true;
     }
-
-    public ArrayList<User> SELECT(String select) {
+    @Override
+    public boolean SELECT(String select) {
         try {
-            // TODO Return lista de Usuarios
             statement = c.createStatement();
             ResultSet rs = statement.executeQuery(select);
             if (debug)
@@ -48,9 +47,9 @@ public class implementCommands implements CommandsSQL {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            return null;
+            return false;
         }
-        return null;
+        return true;
     }
 
     @Override

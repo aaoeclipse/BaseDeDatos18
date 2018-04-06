@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/DataBase/implementCommands.java" line="86" />
+    <bookmark url="file://$PROJECT_DIR$/src/DataBase/implementCommands.java" line="85" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc703e07-14d0-454b-a277-28f3e0c68f50" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Resources/profileDefault.jpeg" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser$returnToTable.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser$returnToTable.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser.class" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AddUser.form" afterPath="$PROJECT_DIR$/src/GUI/AddUser.form" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AddUser.java" afterPath="$PROJECT_DIR$/src/GUI/AddUser.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/CommandsSQL.java" afterPath="$PROJECT_DIR$/src/DataBase/CommandsSQL.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/implementCommands.java" afterPath="$PROJECT_DIR$/src/DataBase/implementCommands.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,15 +21,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="implementCommands.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="implementCommands.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataBase/implementCommands.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="311" column="44" lean-forward="false" selection-start-line="311" selection-start-column="44" selection-end-line="311" selection-end-column="44" />
+            <state relative-caret-position="374">
+              <caret line="34" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="593" selection-end-column="0" />
               <folding>
-                <element signature="e#22220#22221#0" expanded="true" />
-                <element signature="e#22256#22257#0" expanded="true" />
+                <element signature="e#22181#22182#0" expanded="true" />
+                <element signature="e#22217#22218#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandsSQL.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DataBase/CommandsSQL.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,10 +119,10 @@
         <option value="$PROJECT_DIR$/src/GUI/ShowTable.java" />
         <option value="$PROJECT_DIR$/src/Objects/ColumnasExtras.java" />
         <option value="$PROJECT_DIR$/src/Objects/NombreConTipo.java" />
-        <option value="$PROJECT_DIR$/src/DataBase/CommandsSQL.java" />
-        <option value="$PROJECT_DIR$/src/DataBase/implementCommands.java" />
         <option value="$PROJECT_DIR$/src/GUI/AddUser.java" />
         <option value="$PROJECT_DIR$/src/GUI/AddUser.form" />
+        <option value="$PROJECT_DIR$/src/DataBase/CommandsSQL.java" />
+        <option value="$PROJECT_DIR$/src/DataBase/implementCommands.java" />
       </list>
     </option>
   </component>
@@ -141,8 +147,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,13 +180,6 @@
               <item name="BaseDeDatos18" type="b2602c69:ProjectViewProjectNode" />
               <item name="BaseDeDatos18" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="AddUser" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="BaseDeDatos18" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BaseDeDatos18" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Objects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -195,8 +192,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,7 +381,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32848233" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1787466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18038148" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -670,14 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataBase/CommandsSQL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Objects/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="614">
@@ -732,12 +723,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataBase/implementCommands.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="311" column="44" lean-forward="false" selection-start-line="311" selection-start-column="44" selection-end-line="311" selection-end-column="44" />
+        <state relative-caret-position="374">
+          <caret line="34" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="593" selection-end-column="0" />
           <folding>
-            <element signature="e#22220#22221#0" expanded="true" />
-            <element signature="e#22256#22257#0" expanded="true" />
+            <element signature="e#22181#22182#0" expanded="true" />
+            <element signature="e#22217#22218#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataBase/CommandsSQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
