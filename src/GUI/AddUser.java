@@ -201,12 +201,11 @@ public class AddUser {
             icon = createImageIcon(user.getFoto_dir(),
                     "imagen");
         } catch (Exception e){
-            icon = createImageIcon("../Resources/profileDefault.png",
+            icon = createImageIcon("../Resources/profileDefault.jpeg",
                     "default");
             if (icon == null){
                 System.err.println("No image");
             }
-            System.out.println("No tiene foto");
         }
         imageLabel.setIcon(icon);
 
