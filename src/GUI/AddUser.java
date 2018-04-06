@@ -35,6 +35,7 @@ public class AddUser {
     private JComboBox comboProyecto;
     private JScrollPane scrollColumnas;
     private JButton nuevaColumnaButton;
+    private JButton tweetsButton;
     private JButton seleccionarImagenButton;
     private TableColumn columns;
     private TableColumn values;
@@ -85,6 +86,12 @@ public class AddUser {
             public void actionPerformed(ActionEvent actionEvent) {
                 fc = new JFileChooser();
                 fc.showOpenDialog(thisWindow);
+            }
+        });
+        tweetsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+
             }
         });
     }
