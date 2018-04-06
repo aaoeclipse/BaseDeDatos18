@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc703e07-14d0-454b-a277-28f3e0c68f50" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/twitterInfo.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/twitterInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/TwitterView$1.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/TwitterView$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/TwitterView.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/TwitterView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/twitter/Tweets.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/twitter/Tweets.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/twitter/twitter.py" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/twitter/twitter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/ShowTable.form" afterPath="$PROJECT_DIR$/src/GUI/ShowTable.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/ShowTable.java" afterPath="$PROJECT_DIR$/src/GUI/ShowTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/TwitterView.form" afterPath="$PROJECT_DIR$/src/GUI/TwitterView.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/TwitterView.java" afterPath="$PROJECT_DIR$/src/GUI/TwitterView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.java" afterPath="$PROJECT_DIR$/src/main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/twitterInfo.form" afterPath="$PROJECT_DIR$/src/GUI/twitterInfo.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/twitter/Tweets.java" afterPath="$PROJECT_DIR$/src/twitter/Tweets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/twitter/twitter.py" afterPath="$PROJECT_DIR$/src/twitter/twitter.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,11 +50,11 @@
       <file leaf-file-name="Tweets.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/twitter/Tweets.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+            <state relative-caret-position="442">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1016#1026#0" expanded="true" />
+                <element signature="e#1017#1027#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,7 +63,7 @@
       <file leaf-file-name="TwitterView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/TwitterView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-516">
+            <state relative-caret-position="2108">
               <caret line="62" column="68" lean-forward="false" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -111,14 +99,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="twitterInfo.form" pinned="false" current-in-tab="false">
+      <file leaf-file-name="twitterInfo.form" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/twitterInfo.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TwitterView.form" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TwitterView.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/TwitterView.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
@@ -193,14 +181,14 @@
         <option value="$PROJECT_DIR$/src/DataBase/CommandsSQL.java" />
         <option value="$PROJECT_DIR$/src/GUI/AddUser.java" />
         <option value="$PROJECT_DIR$/src/DataBase/implementCommands.java" />
-        <option value="$PROJECT_DIR$/src/twitter/Tweets.java" />
         <option value="$PROJECT_DIR$/src/GUI/twitterInfo.java" />
         <option value="$PROJECT_DIR$/src/GUI/ShowTable.form" />
         <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/src/GUI/ShowTable.java" />
-        <option value="$PROJECT_DIR$/src/GUI/twitterInfo.form" />
         <option value="$PROJECT_DIR$/src/GUI/TwitterView.form" />
         <option value="$PROJECT_DIR$/src/GUI/TwitterView.java" />
+        <option value="$PROJECT_DIR$/src/twitter/Tweets.java" />
+        <option value="$PROJECT_DIR$/src/GUI/twitterInfo.form" />
       </list>
     </option>
   </component>
@@ -992,28 +980,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/ShowTable.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/twitter/Tweets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1016#1026#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1030,9 +1002,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/twitterInfo.form">
+    <entry file="file://$PROJECT_DIR$/src/GUI/TwitterView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2108">
+          <caret line="62" column="68" lean-forward="false" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1615#1625#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/ShowTable.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/twitter/Tweets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1017#1027#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/twitterInfo.java">
@@ -1045,18 +1039,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/TwitterView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-516">
-          <caret line="62" column="68" lean-forward="false" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1615#1625#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/GUI/TwitterView.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/TwitterView.form">
+    <entry file="file://$PROJECT_DIR$/src/GUI/twitterInfo.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
