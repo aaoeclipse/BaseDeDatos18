@@ -1,8 +1,6 @@
 package GUI;
-
 import DataBase.CommandsSQL;
 import Objects.User;
-
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -14,7 +12,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Stack;
-
 public class ShowTable {
     private JTable tablaUsuarios;
     private JTextField searchTextField;
@@ -48,7 +45,6 @@ public class ShowTable {
     public ShowTable(CommandsSQL dbconnection) {
         // connexion a base de datos
         this.dbconnection = dbconnection;
-
         // Window
         thisWindow = new JFrame("Table");
         thisWindow.setContentPane(TableForm);
@@ -56,10 +52,8 @@ public class ShowTable {
         thisWindow.pack();
         thisWindow.setSize(1550,800);
         thisWindow.setVisible(true);
-
         // init
         first = true;
-
         // Tabla
         DefaultTableModel model = (DefaultTableModel) tablaUsuarios.getModel();
         tablaUsuarios.setShowGrid(true);
@@ -94,6 +88,55 @@ public class ShowTable {
                 }
             }
         });
+        // SEARCH FIELD desaparece lo que lleva adentro para facilitar el uso
+        searchTextField.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent mouseEvent) {
+                super.mouseClicked(mouseEvent);
+                if (first)
+                    searchTextField.setText("");
+            }
+        });
+        // SEARCH BUTTON - manda a llenar la tabla con un select LIKE y busca usuarios con el String del search text field
+        searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                DefaultTableModel model = (DefaultTableModel) tablaUsuarios.getModel();
+                if (searchTextField.getText() == null || searchTextField.getText().equalsIgnoreCase("")) {
+                    if (model.getRowCount() > 0) {
+                        for (int i = model.getRowCount() - 1; i > -1; i--) {
+                            model.removeRow(i);
+                        }
+                    }
+                    users = dbconnection.getUsers(); // DB gets user
+                    for (int i = 0; i < users.size(); i++) {
+                        model.addRow(users.get(i).stringArray());
+                    }
+                } else {
+                    if (model.getRowCount() > 0) {
+                        for (int i = model.getRowCount() - 1; i > -1; i--) {
+                            model.removeRow(i);
+                        }
+                    }
+                    users = dbconnection.getUsers(searchTextField.getText()); // DB gets user
+                    //if (users.size() == 0)
+                    // users = dbconnection.getUsersLastName(searchTextField.getText());
+                    for (int i = 0; i < users.size(); i++) {
+                        model.addRow(users.get(i).stringArray());
+                    }
+                    // CLICK LISTNER PARA LA TABLA
+                    tablaUsuarios.getSelectionModel().addListSelectionListener(event -> {
+                        if (tablaUsuarios.getSelectedRow() > -1) {
+                            if (!notReopen) {
+                                notReopen = true;
+                                AddUser newWindow = new AddUser(users.get(Integer.parseInt(tablaUsuarios.getValueAt(tablaUsuarios.getSelectedRow(), 0).toString())), dbconnection);
+                                thisWindow.dispose();
+                            }
+                        }
+                    });
+                }
+            }
+        });
         // Listners
         logOutButton.addActionListener(new ActionListener() {
             @Override
@@ -121,7 +164,6 @@ public class ShowTable {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dbconnection.SELECT("SELECT COUNT(id) FROM public.\"Empleado\" ");
-
             }
         });
         numeroDeEmpleadosEnButton1.addActionListener(new ActionListener() {
@@ -138,13 +180,11 @@ public class ShowTable {
                 dbconnection.SELECT("SELECT COUNT(*) FROM public.\"Empleado\" \n" +
                         "INNER JOIN public.\"Puesto\" ON (public.\"Puesto\".\"id\" = public.\"Empleado\".\"id_puesto\") \n" +
                         "WHERE public.\"Puesto\".\"nombre\" LIKE '%"+textFieldPuestoResumen.getText()+"%' ");
-
             }
         });
         promedioDeSalarioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 dbconnection.SELECT("SELECT AVG(public.\"Empleado\".\"salario\") FROM public.\"Empleado\" \n" +
                         "INNER JOIN public.\"Puesto\" ON (public.\"Puesto\".\"id\" = public.\"Empleado\".\"id_puesto\") \n" +
                         "WHERE public.\"Puesto\".\"nombre\" LIKE '%"+textFieldPuestoSalarioResumen.getText()+"%'");
@@ -153,12 +193,9 @@ public class ShowTable {
         btnSalarioMasAlto.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 dbconnection.SELECT("SELECT public.\"Empleado\".\"salario\" FROM public.\"Empleado\" ORDER BY public.\"Empleado\".\"salario\" DESC LIMIT 1");
             }
         });
-
-
         cumpleañerosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -166,15 +203,12 @@ public class ShowTable {
                         "WHERE date_part('month', public.\"Empleado\".\"fecha_nacimiento\") = date_part('month', current_timestamp)");
             }
         });
-
         listarEmpleadosConMayorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dbconnection.SELECT("SELECT * FROM public.\"Empleado\" WHERE public.\"Empleado\".\"salario\" > "+textFieldSalarioMayor.getText());
             }
         });
-
-
         listarEmpleadosConHorarioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -186,7 +220,6 @@ public class ShowTable {
         listarUltimosEmpleadosContratadosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 dbconnection.SELECT("SELECT * FROM public.\"Empleado\"\n" +
                         "                ORDER BY public.\"Empleado\".\"fecha_contratacion\" DESC LIMIT 10");
             }
@@ -194,10 +227,8 @@ public class ShowTable {
         listarEmpleadosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 dbconnection.SELECT("SELECT * FROM public.\"Empleado\" WHERE public.\"Empleado\".\"horario\" LIKE '%"+textFieldTecnologiaDetallado.getText()+"%'");
             }
         });
     }
-
 }
