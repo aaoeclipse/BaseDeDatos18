@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/DataBase/implementCommands.java" line="157" />
+    <bookmark url="file://$PROJECT_DIR$/src/DataBase/implementCommands.java" line="156" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc703e07-14d0-454b-a277-28f3e0c68f50" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/GUI/TwitterView.form" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/GUI/TwitterView.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/GUI/twitterInfo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/twitter.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/twitter/insetsprueba.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/twitter/twitter.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser$1.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser$2.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser$2.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser$3.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser$3.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser$4.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser$4.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser$returnToTable.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser$returnToTable.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/AddUser.class" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AddUser.java" afterPath="$PROJECT_DIR$/src/GUI/AddUser.java" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/ShowTable.form" afterPath="$PROJECT_DIR$/src/GUI/ShowTable.form" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$10.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$10.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$11.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$11.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$12.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$12.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$13.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$13.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$14.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$14.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$15.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$15.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$3.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$3.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$4.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$4.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$5.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$5.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$6.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$6.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$7.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$7.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$8.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$8.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$9.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable$9.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable.class" afterPath="$PROJECT_DIR$/out/production/BaseDeDatos18/GUI/ShowTable.class" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/CommandsSQL.java" afterPath="$PROJECT_DIR$/src/DataBase/CommandsSQL.java" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/implementCommands.java" afterPath="$PROJECT_DIR$/src/DataBase/implementCommands.java" />
       <change beforePath="$PROJECT_DIR$/src/GUI/ShowTable.java" afterPath="$PROJECT_DIR$/src/GUI/ShowTable.java" />
-      <change beforePath="$PROJECT_DIR$/src/twitter/Tweets.java" afterPath="$PROJECT_DIR$/src/twitter/Tweets.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,20 +37,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ShowTable.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ShowTable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/ShowTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="167" column="54" lean-forward="false" selection-start-line="167" selection-start-column="54" selection-end-line="167" selection-end-column="54" />
+            <state relative-caret-position="195">
+              <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShowTable.form" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ShowTable.form" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/ShowTable.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="implementCommands.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataBase/implementCommands.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="41" column="9" lean-forward="false" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandsSQL.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataBase/CommandsSQL.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -71,6 +92,8 @@
       <find>Nombre</find>
       <find>nuevaColumnaButton</find>
       <find>label</find>
+      <find>output</find>
+      <find>Lista</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -101,14 +124,14 @@
         <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/src/Objects/NombreConTipo.java" />
         <option value="$PROJECT_DIR$/src/Objects/ColumnasExtras.java" />
-        <option value="$PROJECT_DIR$/src/DataBase/CommandsSQL.java" />
-        <option value="$PROJECT_DIR$/src/DataBase/implementCommands.java" />
         <option value="$PROJECT_DIR$/src/twitter/Tweets.java" />
         <option value="$PROJECT_DIR$/src/twitter/Twitter.java" />
         <option value="$PROJECT_DIR$/src/GUI/AddUser.form" />
         <option value="$PROJECT_DIR$/src/GUI/AddUser.java" />
         <option value="$PROJECT_DIR$/src/GUI/TwitterView.java" />
         <option value="$PROJECT_DIR$/src/GUI/ShowTable.form" />
+        <option value="$PROJECT_DIR$/src/DataBase/CommandsSQL.java" />
+        <option value="$PROJECT_DIR$/src/DataBase/implementCommands.java" />
         <option value="$PROJECT_DIR$/src/GUI/ShowTable.java" />
       </list>
     </option>
@@ -165,13 +188,6 @@
               <item name="BaseDeDatos18" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BaseDeDatos18" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BaseDeDatos18" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="ShowTable" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="BaseDeDatos18" type="b2602c69:ProjectViewProjectNode" />
@@ -756,27 +772,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/twitter/Tweets.java" />
-    <entry file="file://$PROJECT_DIR$/src/DataBase/implementCommands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="68" column="38" lean-forward="false" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
-          <folding>
-            <element signature="e#22112#22113#0" expanded="false" />
-            <element signature="e#22148#22149#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataBase/CommandsSQL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -893,17 +888,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/ShowTable.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/DataBase/CommandsSQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataBase/implementCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="41" column="9" lean-forward="false" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/ShowTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="167" column="54" lean-forward="false" selection-start-line="167" selection-start-column="54" selection-end-line="167" selection-end-column="54" />
+        <state relative-caret-position="195">
+          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/ShowTable.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
   </component>

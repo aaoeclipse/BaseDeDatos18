@@ -41,6 +41,8 @@ public class ShowTable {
     private ArrayList<User> users;
     private CommandsSQL dbconnection;
     private boolean first;
+    private ArrayList<String> resultqr;
+    private String output;
     private boolean notReopen = false;
     public ShowTable(CommandsSQL dbconnection) {
         // connexion a base de datos
@@ -164,72 +166,122 @@ public class ShowTable {
         botonNumeroEmpleado.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                queryResults.setText(dbconnection.SELECT("SELECT COUNT(id) FROM public.\"Empleado\" "));
-                System.out.println("Boton Precionado..");
+                queryResults.setText("Numero de Empleado\n");
+                resultqr = dbconnection.SELECT("SELECT COUNT(id) FROM public.\"Empleado\" ");
+                for (String s: resultqr) {
+                    queryResults.append(s);
+                    queryResults.append("\n");
+                }
             }
         });
         numeroDeEmpleadosEnButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dbconnection.SELECT("SELECT COUNT(*) FROM public.\"Empleado\" \n" +
+                queryResults.setText("Numero de Empleado En Tencologia\n");
+
+                resultqr = dbconnection.SELECT("SELECT COUNT(*) FROM public.\"Empleado\" \n" +
                         "INNER JOIN public.\"Tecnologia\" ON (public.\"Tecnologia\".\"id\" = public.\"Empleado\".\"id_tecnologia\") \n" +
                         "WHERE public.\"Tecnologia\".\"nombre\" LIKE '%"+textFieldTecnologiaResumen.getText()+"%'");
+                for (String s: resultqr) {
+                    queryResults.append(s);
+                    queryResults.append("\n");
+                }
             }
         });
         numeroDeEmpleadosEnButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dbconnection.SELECT("SELECT COUNT(*) FROM public.\"Empleado\" \n" +
+                queryResults.setText("Numero de Empleado en Puesto\n");
+                resultqr = dbconnection.SELECT("SELECT COUNT(*) FROM public.\"Empleado\" \n" +
                         "INNER JOIN public.\"Puesto\" ON (public.\"Puesto\".\"id\" = public.\"Empleado\".\"id_puesto\") \n" +
                         "WHERE public.\"Puesto\".\"nombre\" LIKE '%"+textFieldPuestoResumen.getText()+"%' ");
+                for (String s: resultqr) {
+                    queryResults.append(s);
+                    queryResults.append("\n");
+                }
             }
         });
         promedioDeSalarioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dbconnection.SELECT("SELECT AVG(public.\"Empleado\".\"salario\") FROM public.\"Empleado\" \n" +
+                queryResults.setText("Promedio Salario\n");
+
+                resultqr = dbconnection.SELECT("SELECT AVG(public.\"Empleado\".\"salario\") FROM public.\"Empleado\" \n" +
                         "INNER JOIN public.\"Puesto\" ON (public.\"Puesto\".\"id\" = public.\"Empleado\".\"id_puesto\") \n" +
                         "WHERE public.\"Puesto\".\"nombre\" LIKE '%"+textFieldPuestoSalarioResumen.getText()+"%'");
+                for (String s: resultqr) {
+                    queryResults.append(s);
+                    queryResults.append("\n");
+                }
             }
         });
         btnSalarioMasAlto.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dbconnection.SELECT("SELECT public.\"Empleado\".\"salario\" FROM public.\"Empleado\" ORDER BY public.\"Empleado\".\"salario\" DESC LIMIT 1");
+                queryResults.setText("Salario Mas alto\n");
+                resultqr = dbconnection.SELECT("SELECT public.\"Empleado\".\"salario\" FROM public.\"Empleado\" ORDER BY public.\"Empleado\".\"salario\" DESC LIMIT 1");
+                for (String s: resultqr) {
+                    queryResults.append(s);
+                    queryResults.append("\n");
+                }
             }
         });
         cumpleañerosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dbconnection.SELECT("SELECT * FROM public.\"Empleado\" " +
+                queryResults.setText("Cumpleaños\n");
+                resultqr = dbconnection.SELECT("SELECT * FROM public.\"Empleado\" " +
                         "WHERE date_part('month', public.\"Empleado\".\"fecha_nacimiento\") = date_part('month', current_timestamp)");
+                for (String s: resultqr) {
+                    queryResults.append(s);
+                    queryResults.append("\n");
+                }
             }
         });
         listarEmpleadosConMayorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dbconnection.SELECT("SELECT * FROM public.\"Empleado\" WHERE public.\"Empleado\".\"salario\" > "+textFieldSalarioMayor.getText());
+                queryResults.setText("Empleados Con Mayor Salario");
+                resultqr = dbconnection.SELECT("SELECT * FROM public.\"Empleado\" WHERE public.\"Empleado\".\"salario\" > "+textFieldSalarioMayor.getText());
+                for (String s: resultqr) {
+                    queryResults.append(s);
+                    queryResults.append("\n");
+                }
             }
         });
         listarEmpleadosConHorarioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //dbconnection.SELECT("");
-                dbconnection.SELECT("SELECT * FROM public.\"Empleado\" " +
+                queryResults.setText("Empleados con Horario\n");
+                resultqr = dbconnection.SELECT("SELECT * FROM public.\"Empleado\" " +
                         "WHERE public.\"Empleado\".\"horario\" LIKE '%"+textFieldHorario.getText()+"%'");
+                for (String s: resultqr) {
+                    queryResults.append(s);
+                    queryResults.append("\n");
+                }
             }
         });
         listarUltimosEmpleadosContratadosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dbconnection.SELECT("SELECT * FROM public.\"Empleado\"\n" +
+                queryResults.setText("Ultimos empleados Contratados\n");
+                resultqr = dbconnection.SELECT("SELECT * FROM public.\"Empleado\"\n" +
                         "                ORDER BY public.\"Empleado\".\"fecha_contratacion\" DESC LIMIT 10");
+                for (String s: resultqr) {
+                    queryResults.append(s);
+                    queryResults.append("\n");
+                }
             }
         });
         listarEmpleadosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                queryResults.setText("Listar Empleado\n");
                 dbconnection.SELECT("SELECT * FROM public.\"Empleado\" WHERE public.\"Empleado\".\"horario\" LIKE '%"+textFieldTecnologiaDetallado.getText()+"%'");
+                for (String s: resultqr) {
+                    queryResults.append(s);
+                    queryResults.append("\n");
+                }
             }
         });
     }

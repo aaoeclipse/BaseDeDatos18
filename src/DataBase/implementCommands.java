@@ -7,7 +7,7 @@ public class implementCommands implements CommandsSQL {
     Connection c = null;
     Statement statement = null;
     String sql = null;
-    String output = null;
+    ArrayList<String> output = null;
     static String DB_URL = "jdbc:postgresql://localhost:5432/proyecto1";
     boolean debug = false;
     @Override
@@ -27,15 +27,14 @@ public class implementCommands implements CommandsSQL {
         return true;
     }
     @Override
-    public String SELECT(String select) {
+    public ArrayList<String> SELECT(String select) {
         try {
+            output = new ArrayList<>();
             statement = c.createStatement();
             ResultSet rs = statement.executeQuery(select);
-            if (debug)
-                while (rs.next()) {
-                    output = rs.getString(0);
-                    System.out.println(output);
-                }
+            while (rs.next()) {
+                    output.add(rs.getString(1));
+            }
             statement.close();
         } catch (SQLException e) {
             e.printStackTrace();
