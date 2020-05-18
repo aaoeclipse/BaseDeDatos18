@@ -16,9 +16,7 @@ public class implementCommands implements CommandsSQL {
             if (password == null)
                 password = "";
             Class.forName("org.postgresql.Driver");
-            c = DriverManager
-                    .getConnection(DB_URL,
-                            username, password);
+            c = DriverManager.getConnection(DB_URL, username, password);
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             return false;
@@ -61,7 +59,7 @@ public class implementCommands implements CommandsSQL {
             User newUser;
             ArrayList<User> toReturn = new ArrayList<>();
             statement = c.createStatement();
-            sql = "SELECT id, nombre, apellido, salario, direccion, fecha_contratacion, horario, \n" +
+            sql = "SELECT id, nombre, apellido, salario, direccion, fecha_contratacion, horrario, \n" +
                     "       departamento, foto_dir, fecha_nacimiento, id_puesto, id_tecnologia, \n" +
                     "       \"id_Proyecto\"\n" +
                     "  FROM public.\"Empleado\" ORDER BY id ASC;";
@@ -100,7 +98,7 @@ public class implementCommands implements CommandsSQL {
             User newUser;
             ArrayList<User> toReturn = new ArrayList<>();
             statement = c.createStatement();
-            sql = "SELECT id, nombre, apellido, salario, direccion, fecha_contratacion, horario, \n" +
+            sql = "SELECT id, nombre, apellido, salario, direccion, fecha_contratacion, horrario, \n" +
                     "       departamento, foto_dir, fecha_nacimiento, id_puesto, id_tecnologia, \n" +
                     "       \"id_Proyecto\"\n" +
                     "  FROM public.\"Empleado\" WHERE LOWER(nombre) LIKE \'%" + name.replaceAll("[^a-zA-Z]", "") + "%\';";
@@ -142,7 +140,7 @@ public class implementCommands implements CommandsSQL {
             User newUser;
             ArrayList<User> toReturn = new ArrayList<>();
             statement = c.createStatement();
-            sql = "SELECT id, nombre, apellido, salario, direccion, fecha_contratacion, horario, \n" +
+            sql = "SELECT id, nombre, apellido, salario, direccion, fecha_contratacion, horrario, \n" +
                     "       departamento, foto_dir, fecha_nacimiento, id_puesto, id_tecnologia, \n" +
                     "       \"id_Proyecto\"\n" +
                     "  FROM public.\"Empleado\" WHERE LOWER(apellido) LIKE \'%" + name.replaceAll("[^a-zA-Z]", "") + "%\';";
@@ -199,7 +197,7 @@ public class implementCommands implements CommandsSQL {
             try {
                 statement = c.createStatement();
                 sql = "INSERT INTO public.\"Empleado\"(\n" +
-                        "id, nombre, apellido, salario, direccion,  horario, departamento, foto_dir, fecha_nacimiento, fecha_contratacion, id_puesto, id_tecnologia, " +
+                        "id, nombre, apellido, salario, direccion,  horrario, departamento, foto_dir, fecha_nacimiento, fecha_contratacion, id_puesto, id_tecnologia, " +
                         "\"id_Proyecto\")" +
                         "    VALUES (";
                 for (String s : toAdd) {
@@ -223,7 +221,7 @@ public class implementCommands implements CommandsSQL {
             try {
                 statement = c.createStatement();
                 sql = "UPDATE public.\"Empleado\"\n" +
-                        "SET (id, nombre, apellido, salario, direccion,  horario, departamento, foto_dir, fecha_nacimiento, fecha_contratacion, id_puesto, id_tecnologia,\"id_Proyecto\")\n = (";
+                        "SET (id, nombre, apellido, salario, direccion,  horrario, departamento, foto_dir, fecha_nacimiento, fecha_contratacion, id_puesto, id_tecnologia,\"id_Proyecto\")\n = (";
                 for (String s : toAdd) {
                     if (s == null) {
                         s = "null";
@@ -534,13 +532,13 @@ public class implementCommands implements CommandsSQL {
             ResultSet rs = statement.executeQuery(sql);
             rs.next();
             toReturn = Integer.parseInt(rs.getString(1));
-            toReturn += 1;
             statement.close();
+            toReturn += 1;
             return toReturn;
         } catch (SQLException e) {
             System.out.println("ERROR: getNewID");
             System.out.println(e);
-            return -1;
+            return 1;
         }
     }
     private boolean checkIfValorExist(int id){

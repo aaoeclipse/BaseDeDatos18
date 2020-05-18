@@ -13,7 +13,7 @@ public class PostgreSQLJDBC {
 
 		//CONNECT
 		userName = "postgres";
-		password = "";
+		password = "spartan2012";
 		impl.Connect(userName, password);
 		//Finish Connecting
 		impl.DATABASELOGIN("ropa", userName, password);
